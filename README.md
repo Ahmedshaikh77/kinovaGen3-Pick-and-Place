@@ -65,17 +65,17 @@ Run the final `source install/setup.bash` (or `source install/local_setup.bash`)
 
 3. **Terminal C — Populate the planning scene**  
    ```bash
-   cd ~/workspaces/ms1242_robotics_fall2025/lab06/ros2_ws
+   cd ~/workspaces/ms1242_robotics_fall2025/moveit/ros2_ws
    source install/setup.bash
-   ros2 run lab06_moveit pick_and_place --ros-args -p task:=add_scene
+   ros2 run moveit_moveit pick_and_place --ros-args -p task:=add_scene
    ```
    The `add_scene` task inserts the table and three cubes so MoveIt understands the environment.
 
 4. **Terminal D — Run the stacking routine**  
    ```bash
-   cd ~/workspaces/ms1242_robotics_fall2025/lab06/ros2_ws
+   cd ~/workspaces/ms1242_robotics_fall2025/moveit/ros2_ws
    source install/setup.bash
-   ros2 run lab06_moveit pick_and_place --ros-args -p task:=stack
+   ros2 run moveit_moveit pick_and_place --ros-args -p task:=stack
    ```
    The node calls `task_stack_all()` which sequentially places block 1 onto block 2, then block 3 on top, pausing long enough for Gazebo physics to settle between grasps/releases.
 
@@ -88,7 +88,7 @@ Run the final `source install/setup.bash` (or `source install/local_setup.bash`)
 | `pick_place_one` | Demonstrates a single pick-place cycle that returns the cube to its starting spot. |
 | `stack` | Executes `task_stack_all()` to build the three-block tower. |
 
-Run any task with `ros2 run lab06_moveit pick_and_place --ros-args -p task:=<name>` from a sourced workspace terminal.
+Run any task with `ros2 run moveit_moveit pick_and_place --ros-args -p task:=<name>` from a sourced workspace terminal.
 
 ## Customization Notes
 - **Poses & grasp logic:** Edit `ros2_ws/src/moveit/moveit/scripts/pick_and_place.py` to change block locations (`self.blocks_xyz`), approach heights, or the stacking order.
