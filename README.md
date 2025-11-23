@@ -65,7 +65,7 @@ Run the final `source install/setup.bash` (or `source install/local_setup.bash`)
 
 3. **Terminal C — Populate the planning scene**  
    ```bash
-   cd ~/workspaces/ms1242_robotics_fall2025/moveit/ros2_ws
+   cd ~/workspaces/moveit/ros2_ws
    source install/setup.bash
    ros2 run moveit_moveit pick_and_place --ros-args -p task:=add_scene
    ```
@@ -73,7 +73,7 @@ Run the final `source install/setup.bash` (or `source install/local_setup.bash`)
 
 4. **Terminal D — Run the stacking routine**  
    ```bash
-   cd ~/workspaces/ms1242_robotics_fall2025/moveit/ros2_ws
+   cd ~/workspaces/moveit/ros2_ws
    source install/setup.bash
    ros2 run moveit_moveit pick_and_place --ros-args -p task:=stack
    ```
